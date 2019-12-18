@@ -16,6 +16,7 @@
       <input type="text" class="form-control"  #telInput name="tel" required [(ngModel)]="tel" placeholder="輸入tel">
     </div>
 
+  <h3>checkbox多選</h3>
   <div class="form-group">
     <label for="name">複選:</label>
     <label for="name">地球</label>
@@ -26,6 +27,7 @@
     <input type="checkbox" #addrMars name="mars" [(ngModel)]="mars">
   </div>
 
+  <h3>checkbox單選</h3>
   <div class="form-group">
     <label for="name">單選:</label>
     <label for="name">地球</label>
@@ -34,6 +36,13 @@
     <input type="checkbox" #addrVenus name="venus2" [(ngModel)]="venus2" (click)="onlyOne()">
     <label for="name">火星</label>
     <input type="checkbox" #addrMars name="mars2" [(ngModel)]="mars2" (click)="onlyOne()">
+  </div>
+
+  <h3>radio單選</h3>
+  <div class="form-group">
+    <input type="radio" name="addrs" (click)="addr='earth'">earth
+    <input type="radio" name="addrs" (click)="addr='venus'">venus
+    <input type="radio" name="addrs" (click)="addr='mars'">mars
   </div>
 
     {{nameForm.value | json}}
